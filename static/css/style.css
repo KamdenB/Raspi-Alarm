@@ -1,0 +1,54 @@
+body {
+    background: #333;
+    color:white;
+}
+
+.form {
+    width: 50%;
+    margin: auto;
+}
+
+.submit {
+    margin: auto;
+}
+
+.submit > button {
+    width: 100%;
+}
+
+.vertical-center {
+    /* height: 100%; */
+    width: 100%;
+    text-align: center;
+    font: 0/0 a;
+    /* margin-top: 8vh; */
+}
+
+.vertical-center:before {
+    content: " ";
+    display: inline-block;
+    vertical-align: middle;
+    /* height: 100%; */
+}
+
+.verical-center > .form {
+    max-width: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.table {
+    background-color:white;
+}
+
+.info {
+    color:black;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    font-size: 16   px
+}
+
+.parent {
+    margin-top: 10vh;
+}
