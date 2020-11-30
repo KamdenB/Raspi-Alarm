@@ -3,7 +3,6 @@ import time
 class LightControl:
     def __init__(self, channel, pin):
         self.channel = channel 
-        self.pin = pin
 
     def on(self):
         return True

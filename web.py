@@ -6,7 +6,7 @@ if(platform.architecture()[0] == "32bit"): #Import full light control or dummy c
 else:
     from LightControlDummy import LightControl
 
-lc = LightControl(1,1)
+lc = LightControl(21)
 
 app = Flask(__name__)
 

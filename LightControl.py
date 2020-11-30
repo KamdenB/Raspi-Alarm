@@ -7,17 +7,16 @@ GPIO.setwarnings(False)
 # if(platform.architecture()[0] == "32bit"):
 
 class LightControl:
-    def __init__(self, channel, pin):
+    def __init__(self, channel):
         self.channel = channel 
-        self.pin = pin
         GPIO.setmode(GPIO.BCM)
         GPIO.setup(self.channel, GPIO.OUT)
 
     def on(self):
-        GPIO.output(self.pin, GPIO.HIGH)
+        GPIO.output(self.channel, GPIO.HIGH)
 
     def off(self):  
-        GPIO.output(self.pin, GPIO.LOW)
+        GPIO.output(self.channel, GPIO.LOW)
 
     def flash(self, time, count):
         # if(not self.notPi)
@@ -28,3 +27,4 @@ class LightControl:
             time.sleep(time*100)
             i+=1
         self.off()
+        GPIO.cleanup()
