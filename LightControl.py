@@ -21,10 +21,15 @@ class LightControl:
     def flash(self, time, count):
         # if(not self.notPi)
         for i in range(count):
-            self.on()
-            time.sleep(time*100)
-            self.off()
-            time.sleep(time*100)
-            i+=1
+            try:
+                self.on()
+                time.sleep(time*100)
+                self.off()
+                time.sleep(time*100)
+            except:
+                print("GPIO Error")
+            finally:
+                i+=1
+                GPIO.cleanup()
         self.off()
         GPIO.cleanup()
