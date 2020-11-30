@@ -2,6 +2,8 @@ import time
 import platform
 import RPi.GPIO as GPIO
 
+GPIO.setwarnings(False)
+
 # if(platform.architecture()[0] == "32bit"):
 
 class LightControl:
