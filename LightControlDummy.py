@@ -1,21 +1,15 @@
 import time
-import platform
-import RPi.GPIO as GPIO
-
-# if(platform.architecture()[0] == "32bit"):
 
 class LightControl:
     def __init__(self, channel, pin):
         self.channel = channel 
         self.pin = pin
-        GPIO.setmode(GPIO.BCM)
-        GPIO.setup(self.channel, GPIO.OUT)
 
     def on(self):
-        GPIO.output(self.pin, GPIO.HIGH)
+        return True
 
     def off(self):  
-        GPIO.output(self.pin, GPIO.LOW)
+        return True
 
     def flash(self, time, count):
         # if(not self.notPi)
